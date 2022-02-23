@@ -1,0 +1,555 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: PostNoBillsJaffna-Regular;
+    user-select: none;  
+}
+
+.about-block {
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: .3s;
+    opacity: 0;
+    font-family: PostNoBillsJaffna-Bold;
+    margin-top: 40px;
+}
+
+.about-block-vis {
+    font-size: 16px;
+    width: 500px;
+    height: 300px;
+    opacity: 1;
+}
+
+header {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    z-index: 2;
+    font-size: 36px;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: PostNoBillsJaffna-Bold;
+}
+
+.header-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dif, .start-game, .restart-game, .game-list, .about, .active, .volume {
+    cursor: pointer;
+}
+
+.difficult {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dif {
+    width: 120px;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 20px;
+}
+
+.volume {
+    width: 50px;
+    height: 50px;
+    background: url(../assets/images/volume.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    transition: .3s;
+}
+
+.volume-off {
+    width: 50px;
+    height: 50px;
+    background: url(../assets/images/volume-off.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    transition: .3s;
+}
+
+.active {
+    color: white;
+    background-color: #000000;
+    width: 120px;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.active:hover {
+    background-color: rgba(51, 51, 51, 0.925);
+}
+
+.play {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.start-game{
+    width: 140px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.game-list {
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/svg/game-list-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    transition: .3s;
+    margin-left: 50px;
+}
+
+.game-list:hover {
+    filter: brightness(90%);
+}
+
+.about {
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/images/about-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    transition: .3s;
+}
+
+.dif, .start-game, .restart-game {
+    transition: .3s;
+}
+
+.dif:hover, .start-game:hover, .restart-game:hover {
+    background-color: rgba(110, 109, 109, 0.75);
+}
+
+.dif:active, .start-game:active, .restart-game:active {
+    background-color: rgba(43, 39, 39, 0.75);
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/images/back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+}
+
+.game-area {
+    position: relative;
+    z-index: 3;
+    width: 430px;
+    height: 430px;
+    background-color: black;
+    border-radius: 50px;
+    box-shadow: #000000 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-lines {
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+    background-color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+.area-lines-vis {
+    opacity: 1;
+}
+
+.min-area {
+    position: relative;
+    z-index: 3; 
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    background-image: url(../assets/images/black.png);
+    transition: .5s;
+}
+
+.areaBeer {
+    background-image: url(../assets/images/beer.png);
+}
+
+.areaWine {
+    background-image: url(../assets/images/wine.png);
+}
+
+.menu {
+    position: relative;
+    z-index: 4;
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border-radius: 20px;
+    position: absolute;
+    border: 1px solid black;
+    box-shadow: #000000 0 0 20px;
+    transition: 1s;
+}
+
+.unvis {
+    opacity: 0;
+    transform: translateY(-600px);
+}
+
+.menu p {
+    font-size: 48px;
+    font-family: PostNoBillsJaffna-Bold;
+}
+
+.choose {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.beer, .wine {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    border: 2px solid gray;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.beer:hover, .wine:hover {
+    background-color: gainsboro;
+    box-shadow: gray 0 0 10px;
+}
+
+.beer:active, .wine:active {
+    background-color: rgba(43, 39, 39, 0.75);
+}
+
+.beer {
+    background-image: url(../assets/images/beer.png);
+}
+
+.wine {
+    background-image: url(../assets/images/wine.png);
+}
+
+.table-res {
+    position: relative;
+    z-index: 5;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(165, 165, 165);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border-radius: 20px;
+    position: absolute;
+    border: 1px solid black;
+    box-shadow: #000000 0 0 20px;
+    transition: 1s;
+}
+
+h2 {
+    font-family: PostNoBillsJaffna-Bold;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.games10 {
+    width: 90%;
+    height: 240px;
+}
+
+.last-game, .table-title {
+    width: 100%;
+    height: 24px;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(107, 107, 107);
+    font-family: PostNoBillsJaffna-Bold;
+}
+
+.last-game span {
+    display: inline-block;
+}
+
+.score {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dif-game {
+    width: 80px;
+}
+
+.res {
+    width: 60px;
+}
+
+.choose-static {
+    width: 60px;
+}
+
+.moves {
+    width: 90px;
+}
+
+.date {
+    width: 150px;
+}
+
+.count-game, .proc {
+    font-family: PostNoBillsJaffna-Bold;
+    margin-right: 20px;
+}
+
+.score-win {
+    color: green;
+}
+
+.score-draw {
+    color: yellow;
+}
+
+.score-lose {
+    color: red;
+}
+
+.score-win, .score-draw, .score-lose, .score-game {
+    display: inline-block;
+    max-width: 30px;
+}
+
+.reset-score {
+    color: white;
+    background-color: rgb(85, 0, 0);
+    border-radius: 10px;
+    transition: .3s;
+    width: 180px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.reset-score:hover {
+    background-color: #8f0202;
+}
+
+footer {
+    padding: 5px 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    color: white;
+    font-size: 24px;
+  }
+
+  .footer-list {
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  .footer-list li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .footer-list li a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+  }
+  
+  .footer-list li a:hover {
+    filter: brightness(75%);
+  }
+
+  .rss-link {
+      height: 50px;
+      width: 135px;
+      transition: .3s;
+  }
+
+  .rss-link:hover {
+    filter: brightness(75%);
+  }
+
+  @media (max-width: 1400px) {
+    
+    .about-block-vis {
+        font-size: 14px;
+        width: 400px;
+        height: 280px;
+    }
+    
+    header {
+        height: 70px;
+        font-size: 30px;
+    }
+    
+    .header-container {
+        width: 40%;
+    }
+    
+    .difficult {
+        width: 300px;
+        margin-left: 20px;
+    }
+    
+    .dif {
+        width: 90px;
+    }
+        
+    .active {
+        width: 90px;
+    }
+    
+    .volume {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+    }
+    
+    .volume-off {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+    }    
+    
+    .play {
+        width: 260px;
+    }
+    
+    .start-game{
+        width: 100px;
+        border: 2px solid black;
+        border-radius: 20px;
+        text-align: center;
+    }
+    
+    .game-list {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+    }
+    
+    
+    .about {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+        margin-left: 20px;
+    }
+
+  }
+
+  @media (max-width: 999px) {
+    header {
+        height: 70px;
+        font-size: 24px;
+    }
+    
+    .difficult {
+        width: 200px;
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    
+    .dif {
+        width: 50px;
+    }
+        
+    .active {
+        width: 50px;
+    }
+    
+    .volume {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+    
+    .volume-off {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }    
+    
+    .play {
+        width: 120px;
+    }
+    
+    .start-game{
+        width: 80px;
+    }
+    
+    .game-list {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+    
+    .about {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+        margin-left: 10px;
+    }
+
+  }

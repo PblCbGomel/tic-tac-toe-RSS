@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles/fonts.css">
+    <link type="Image/x-icon" href="./assets/images/favicon.png" rel="icon">
+    <title>Beer & Wine</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="about">
+                <div class="about-block">
+                    <p class="en-about">
+                        There is no easy difficulty, because the game is not for the weak.<br>
+                        Hard difficulty is not invincible.<br>
+                        Excessive alcohol consumption harms your (sometimes someone else's) health.<br>
+                        Good mood and successful game!
+                    </p>
+                    ======================================================
+                    <p class="ru-about">
+                        Лёгкой сложности нет, потому что игра не для слабаков.<br>
+                        Тяжёлая сложность не непобедимая.<br>
+                        Чрезмерное употребление алкоголя вредит вашему (иногда и чужому) здоровью.<br>
+                        Хорошего настроения и удачной игры!<br>
+                    </p>
+                </div>
+            </div>
+            <div class="difficult">
+                Difficult:
+                <div class="middle-dif dif active">Middle</div>
+                <div class="hard-dif dif">Hard</div>
+            </div>
+        </div>
+        <div class="play">
+            <div class="start-game">
+                Start
+            </div>
+        </div>
+        <div class="header-container">       
+            <div class="game-list"></div>
+            <div class="volume vol"></div>
+        </div>
+    </header>
+    <main>
+        <div class="table-res unvis">
+            <h2>Last 10 games:</h2>
+            <div class="games10">
+                <div class="game1 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game2 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game3 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game4 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game5 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game6 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game7 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game8 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game9 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+                <div class="game10 last-game"><span class="res"></span><span class="choose-static"></span><span class="dif-game"></span><span class="moves"></span><span class="date"></span></div>
+            </div>
+            <div class="score">
+                <div class="count-game">Count game: <span class="score-game"></span></div>
+                <div class="proc">Score: <span class="score-win"></span> / <span class="score-draw"></span> / <span class="score-lose"></span></div>
+                <div class="reset-score">Reset score & count game?</div>
+            </div>
+        </div>
+        <div class="game-area">
+            <div class="menu">
+                <p class="menu-p">Let's play</p>
+                <div class="choose">
+                    <div class="beer"></div>
+                    <div class="wine"></div>
+                </div>
+            </div>
+            <div class="area-lines">
+                <div class="area-1 min-area"></div>
+                <div class="area-2 min-area"></div>
+                <div class="area-3 min-area"></div>
+                <div class="area-4 min-area"></div>
+                <div class="area-5 min-area"></div>
+                <div class="area-6 min-area"></div>
+                <div class="area-7 min-area"></div>
+                <div class="area-8 min-area"></div>
+                <div class="area-9 min-area"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul class="footer-list">
+            <li>©</li>
+            <li>2022</li>
+            <li><a href="https://github.com/PblCbGomel" target="_blank">PblCbGomel</a></li>
+        </ul>
+        <a href="https://rs.school/js-stage0/"><img src="./assets/svg/rss.svg" class="rss-link"></a>
+    </footer>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
